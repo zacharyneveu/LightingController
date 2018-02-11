@@ -9,12 +9,18 @@ export default class LightCommand extends React.Component {
     constructor(props) {
         super(props)
         this.clickFunc = this.clickFunc.bind(this);
+        this.state = {toggle: false}
     }
     clickFunc() {
         //Create get request and update component with response
-        $.get(window.location.href + this.props.name, (data) => {
+        $.get(window.location.href + (this.state.toggle==true ? 'Off' : this.props.name), (data) => {
+            if(this.state.toggle == false) {
+                this.setState({toggle: true});
+            }
+            else {
+                this.setState({toggle: false});
+            }
             console.log(data);
-            this.personalizeGreeting(data);
         });
     }
     render() {
