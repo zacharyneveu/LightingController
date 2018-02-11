@@ -9,6 +9,7 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+./server/test/
 
 # React
 .DS_STORE
