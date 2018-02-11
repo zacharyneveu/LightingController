@@ -1,0 +1,36 @@
+.LightCommandButton {
+    background: linear-gradient(-90deg, purple, dodgerblue, lime, yellow);
+    background-size: 400% 400%;
+    animation-name: test;
+    animation-duration: 15s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    border: 1vh solid white;
+    border-radius: 3vh;
+    margin-left: 20vw;
+    margin-top: 20vh;
+    height: 60vh;
+    width: 60vw;
+    color: white;
+}
+
+.LightCommandButton:active {
+    background: black;
+}
+
+@keyframes test {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes flip {
+    from {background: linear-gradient(-90deg, skyblue 20%, lime)}
+    to {background: linear-gradient(-90deg, skyblue 100%, lime)}
+}

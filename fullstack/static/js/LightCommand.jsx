@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/LightCommand.css';
 var $ = require('jquery');
 
 /**A basic button which will send a command to the arduino
@@ -19,7 +20,7 @@ export default class LightCommand extends React.Component {
     render() {
         return (
             <button onClick={this.clickFunc} className="LightCommandButton">
-            {this.props.name}
+                <h1>{this.props.name}</h1>
             </button>
         );
     }
