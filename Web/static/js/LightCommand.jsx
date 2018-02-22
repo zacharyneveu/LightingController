@@ -24,8 +24,15 @@ export default class LightCommand extends React.Component {
         });
     }
     render() {
+        const unLitStyle = {
+            background: 'black'
+        }
+        const litStyle = {
+        }
         return (
-            <button onClick={this.clickFunc} className="LightCommandButton">
+            <button style={this.state.toggle ? litStyle: unLitStyle} 
+                    onClick={this.clickFunc} 
+                    className="LightCommandButton">
                 <h1>{this.props.name}</h1>
             </button>
         );

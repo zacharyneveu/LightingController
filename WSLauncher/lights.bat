@@ -1,0 +1,1 @@
+bash -c "cd /mnt/d/github/LightingController/Web/server && source virtualenv/bin/activate && sudo chmod 666 /dev/ttyS3 && python server.py"

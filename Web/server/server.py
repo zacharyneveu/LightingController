@@ -38,6 +38,9 @@ def index():
 
 # Initialize a serial object when app initializes
 ser = serInit()
+if ser == None:
+    print("Error, null serial for some reason...")
+    quit()
 
 @app.route("/Rainbow")
 def hello():
@@ -55,4 +58,4 @@ def off():
 ################################################################################
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
